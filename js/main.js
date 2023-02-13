@@ -41,5 +41,9 @@ createApp({
     };
   },
 
-  methods: {},
+  methods: {
+    cancelTask(i) {
+      this.tasks.splice(i, 1);
+    },
+  },
 }).mount("#app");

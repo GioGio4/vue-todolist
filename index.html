@@ -35,8 +35,9 @@
 		<div class="container">
 			<ul class="list-group my-5">
 
-				<li v-for="task in tasks" :class="{'text-decoration-line-through':task.done}" class="list-group-item">
-					{{task.text}}
+				<li v-for="(task,index) in tasks" class="list-group-item d-flex align-items-center">
+					<p :class="{'text-decoration-line-through':task.done}">{{task.text}}</p>
+					<i @click="cancelTask(index)" class="cancel-task fa-solid fa-xmark ms-auto"></i>
 				</li>
 
 			</ul>
