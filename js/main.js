@@ -19,7 +19,27 @@ const { createApp } = Vue;
 
 createApp({
   data() {
-    return {};
+    return {
+      tasks: [
+        {
+          text: "Fare la spesa",
+          done: false,
+        },
+        {
+          text: "Preparare il pranzo",
+          done: true,
+        },
+        {
+          text: "Pagare bollette",
+          done: false,
+        },
+        {
+          text: "Comprare cibo cane ",
+          done: true,
+        },
+      ],
+    };
   },
+
   methods: {},
 }).mount("#app");

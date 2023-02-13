@@ -32,7 +32,16 @@
 
 <body>
 	<div id="app">
+		<div class="container">
+			<ul class="list-group my-5">
 
+				<li v-for="task in tasks" :class="{'text-decoration-line-through':task.done}" class="list-group-item">
+					{{task.text}}
+				</li>
+
+			</ul>
+
+		</div>
 	</div>
 
 </body>
