@@ -38,10 +38,18 @@ createApp({
           done: true,
         },
       ],
+      newTask: { text: "", done: false },
     };
   },
 
   methods: {
+    addTask() {
+      const newTask = {
+        text: this.newTask.text,
+        done: false,
+      };
+      this.tasks.push(newTask);
+    },
     cancelTask(i) {
       this.tasks.splice(i, 1);
     },

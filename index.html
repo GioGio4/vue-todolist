@@ -33,6 +33,13 @@
 <body>
 	<div id="app">
 		<div class="container">
+
+			<div class="input-group my-5">
+				<input v-model="newTask.text" type="text" class="form-control" placeholder="New Task"
+					aria-label="New Task" aria-describedby="button-addon2">
+				<button @click="addTask" class="btn btn-outline-secondary" type="button"
+					id="button-addon2">Button</button>
+			</div>
 			<ul class="list-group my-5">
 
 				<li v-for="(task,index) in tasks" class="list-group-item d-flex align-items-center">
